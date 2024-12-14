@@ -1,0 +1,217 @@
+:root{
+    --marginPocetna: 10em;
+}
+
+.Around-picture{
+    margin:5em;
+    margin-left: var(--marginPocetna);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* border-radius: 10px; */
+    gap: 0rem;
+    background-color: var(--primaryColor);
+    background: var(--gradiant);
+    /* position: relative; */
+    color: black;
+}
+.Picture-div{ /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+    text-align: center;
+    padding: 10px;
+    margin-right: 5px;
+    /* background-color: var(--primaryColor); */
+    border-radius: 0;
+    transition: transform .5s;
+    opacity: 1;
+   
+}
+.Picture-div:hover{ /* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+.Picture-div img{
+    height: 20rem;
+    width: 15rem;
+    border-radius: 0;
+    margin: 10px;
+    opacity: 1 ;
+}
+
+.Summary{
+    padding: 30px;
+    padding-top: 0;
+    margin-right: 0;
+    /* background-color: var(--primaryColor); */
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.vertical-line{
+    height: 100%;
+    width: 30%;
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+.vertical-line a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-weight: unset;
+}
+
+.Around-education{
+    margin:5em;
+    margin-left: var(--marginPocetna);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border-radius: 10px; */
+    gap: 0rem;
+    background-color: var(--primaryColor);
+    background: var(--gradiant);
+    /* position: relative; */
+}
+
+.Around-education table{
+    /* border-collapse: collapse; */
+    width: 100%;
+}
+
+.Around-education table td, th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px;
+}
+.Around-education table th {
+    text-align: center;
+}
+
+
+
+.form{  /*https://www.w3schools.com/howto/howto_css_responsive_form.asp */
+    margin:5em;
+    margin-left: var(--marginPocetna);
+    padding: 20px;
+    /* padding-right: 8em; */
+    /* display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; */
+    /* border-radius: 10px; */
+    /* background-color: var(--primaryColor);
+    background: var(--gradiant); */
+    background: transparent;
+    color: white;
+}
+input[type=text], input[type=email], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 0;
+    box-sizing: border-box;
+    resize: vertical;
+    background: var(--gradiant);
+}
+::placeholder{
+    color: black;
+    font-family: 'Poppins';
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.submit{
+    width: 100px;
+    height: 40px;
+    border-radius: 0;
+    background-color: var(--primaryColor);
+    font-family: 'Poppins' ;
+    border: none;
+    padding: 12px 12px;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.labela{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+.polje{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+.form-group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+h4{
+    font-weight: unset;
+    font-style: italic;
+}
+#CV1{
+    display: none;
+}
+.Around-education a{
+    color: purple;
+}
+
+  @media screen and (max-width: 540px) {
+    .labela, .polje, .submit {
+      width: 100%;
+      margin-top: 0;
+    }
+    .Around-picture{
+        flex-wrap: wrap;
+        margin: 5%;
+        margin-left: 10%;
+        margin-top: 10%;
+        font-size: 15px;
+    }
+    #CV1{
+        display:unset;
+    }
+    .Picture-div{
+        margin-top: -25%;
+    }
+    .Around-education{
+        margin: 5%;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .form{
+        margin:5em;
+        margin-left: 10%;
+    }
+
+  }
+  @media screen and (min-width: 540px) and (max-width:1100px){
+    .Around-picture{
+        flex-direction: column;
+        justify-content: left;
+        font-size: 15px;
+        text-align: start;
+        
+    }
+    .Picture-div{
+        margin-top: -10%;
+    }
+  }
+
+
+

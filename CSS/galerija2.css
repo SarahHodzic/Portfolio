@@ -1,0 +1,132 @@
+.grid-container{
+    --height: 300px;
+    --numcols: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--numcols), 1fr);
+    grid-auto-rows: var(--height);
+    box-sizing: border-box;
+    gap:0;
+    color: white;
+    margin: 2%;
+}
+
+.grid-container > div{
+    background: var(--gradiant);
+    /* width: 100%; */
+    /* height: auto; */
+    text-align: center;
+    /* border-radius: 10px; */
+    border: 1px solid white;
+}
+
+/* .grid-container .slika1{
+    background: var(--gradiant);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+} */
+
+.grid-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    transition: transform .5s;
+}
+
+.grid-container img:hover{
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+.slika1{
+    grid-row: 1/3;
+    grid-column: 1;
+}
+.slika3{
+    grid-row: 1/3;
+    grid-column: 3;
+}
+ .slika4{
+    grid-row:1/4;
+    grid-column: 4;
+}
+.slika6{
+    grid-row: 3/5;
+    grid-column: 2/4;
+} 
+.slika9{
+    grid-row: 4/6;
+    grid-column: 4;
+}
+
+
+/* .grid-container .slika2{
+    background: var(--gradiant);
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    border-radius: 10px;
+} */
+
+/* .grid-container .slika3, .grid-container .slika4{
+    background: var(--gradiant);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+} */
+
+.video-container{
+    text-align: center;
+    margin: 1%;
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* background-color: red; */
+}
+
+.video-container > div{
+    /* background-color: red; */
+    height: 600px;
+    width: 300px;
+}
+
+.video-container video{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px){
+    .grid-container{
+        --numcols: 2;
+        --height: 200px;
+    }
+    .slika1{
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    .slika3{
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+     .slika4{
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    .slika6{
+        grid-row: span 1;
+        grid-column: span 1;
+    } 
+    .slika9{
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root{
+	--primaryColor:  #8EC5FC;
+	--gradiant: linear-gradient(62deg, rgba(142, 197, 252, 0.8) 0%, rgba(224, 195, 252, 0.8) 100%);
+	--colorOnHover: #E0C3FC;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	background-image: url(../SLIKE/pozadina.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins';
+	/* background-color: #FCF0FF; */
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+ul.header-items img{
+	width: 1em;
+	height: 1em;
+}
+ul.header-items {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5rem;
+	padding: .5em;
+}
+#galerija{
+	border-radius: 10%;
+}
+.drop-down{ /*https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+	position: relative;
+	display: inline-block;
+}
+.drop-down-sadrzaj{ /*https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+	display: none;
+	position: absolute;
+	background: var(--gradiant);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	font-size: 1em;
+}
+
+.drop-down-sadrzaj a { /*https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+  color: pink;
+  padding: .5em;
+  text-decoration: none;
+  font-weight: unset;
+  display: block;
+}
+
+.drop-down-sadrzaj a:hover{ /*https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+	font-weight: unset;
+	background: var(--colorOnHover);
+}
+.drop-down:hover .drop-down-sadrzaj{ /*https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+	display: block;
+}
+.drop-down:hover #galerija{
+	font-weight: bold;
+}
+
+.header-items a{
+	text-decoration: none;
+	font-size: 1.2em ;
+	color: black;
+}
+nav a:hover{
+	font-weight: bold;
+}
+
+#profilna{
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	margin: .5em;
+	border: solid;
+	border-color: black;
+	transition: transform .5s;
+	object-fit: cover;
+}
+#profilna:hover{
+	transform: scale(1.1);
+}
+.submit-button{
+	cursor: pointer;
+}
+
+.nav-bar{
+	background: var(--gradiant);
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+}
+
+.nav-bar li{
+	flex-wrap: wrap;
+}
+
+.nav-bar .search-container{
+	padding: 10px;
+	margin: 10px;
+}
+
+.search-bar{
+	border-radius: 5px;
+	border: #E0C3FC;
+	width: 160px;
+	height: 30px;
+	padding: 2%;
+	font-size: 12px;
+}
+
+
+.submit-button{
+	width: 80px;
+	height: 30px;
+	padding-top: 0;
+	margin-left: 0;
+	margin-top: .5em;
+	font-size: 12px;
+	border-radius: 5px;
+	background: transparent;
+	font-family: 'Poppins';
+}
+
+.search-container {
+	flex: .3;
+}
+
+::placeholder{
+    color: rgb(129, 128, 128);
+    font-family: 'Poppins';
+}
+
+.header-items a:active{
+	color: white;
+}
+
+@media only screen and (max-width: 520px) {
+	.nav-bar{
+		flex-direction: column;
+	}
+	ul.header-items{
+		flex-direction: column;
+	}
+}
+
